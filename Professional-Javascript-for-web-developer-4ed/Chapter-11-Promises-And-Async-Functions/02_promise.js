@@ -29,5 +29,11 @@ setTimeout(console.log, 11000, p);  //check state after 11 seconds
 //After 10 seconds Uncaught error
 //after 11 seconds promise rejected
 
+//Promise caseing with Primise.resolve()
+let p = new Promise((resolve, reject) => resolve());
+let p2 = Promise.resolve();
+
+setTimeout(console.log)
+
 
 
