@@ -1,5 +1,5 @@
 //promise basic
-let p = new Promise(() => {});
+let p = new Promise(() => { });
 setTimeout(console.log, 0, p);
 
 //controlling promise state with the executor
@@ -10,15 +10,15 @@ let p2 = new Promise((resolve, reject) => reject());
 setTimeout(console.log, 0, p2); //promise rejected
 
 //state cannot be undo once given
-let p = new Promise((resolve, reject) => {
+let p3 = new Promise((resolve, reject) => {
   resolve();
   reject();   //no effect
 })
 
-setTimeout(console.log, 0 , p); //Promise resolved
+setTimeout(console.log, 0, p); //Promise resolved
 
 //avoid promise get stuck. defensive code
-let p = new Promise((resolve, reject) => {
+let p4 = new Promise((resolve, reject) => {
   setTimeout(reject, 10000);
   //do the executor thing
 })
@@ -30,10 +30,20 @@ setTimeout(console.log, 11000, p);  //check state after 11 seconds
 //after 11 seconds promise rejected
 
 //Promise caseing with Primise.resolve()
-let p = new Promise((resolve, reject) => resolve());
-let p2 = Promise.resolve();
+let p5 = new Promise((resolve, reject) => resolve());
+let p6 = Promise.resolve();
 
-setTimeout(console.log)
+//Promise resolved: undefined
+setTimeout(console.log, 0, Promise.resolve());
+//Promise resolved: 3
+setTimeout(console.log, 0, Promise.resolve(3));
+//additional auguments are ignored
+//Promise resolved: 4
+setTimeout(console.log, 0, Promise.resolve(4, 5, 6));
 
 
 
+
+
+
+//promise rejection with Promise.reject
