@@ -15,7 +15,7 @@ class Qux {
 //async example
 async function foo() {
   console.log(1);
-  return Promise.resolve(3);
+  return 3;   //equal to Promise.resolve(3);
 }
 
 foo().then(console.log);
