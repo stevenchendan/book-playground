@@ -60,6 +60,14 @@ console.log(subStringValue.slice(3, -4)); //lo w
 console.log(subStringValue.substring(3, -4)); //hel
 console.log(subStringValue.substr(3, -4)); //[empty string]
 
+//string location indexOf and lastIndexOf
+console.log(subStringValue.indexOf("o"));
+console.log(subStringValue.lastIndexOf("o"));
+
+//string inclusion method
+console.log(subStringValue.startsWith("h")); //true
+console.log(subStringValue.endsWith("d")); //true
+console.log(subStringValue.includes("hello")); //true
 
 
 

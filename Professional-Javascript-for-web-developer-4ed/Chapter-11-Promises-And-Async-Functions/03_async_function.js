@@ -24,3 +24,7 @@ console.log(2);
 //1
 //2
 //3
+
+
+//async and await. await can only resident inside async
+
