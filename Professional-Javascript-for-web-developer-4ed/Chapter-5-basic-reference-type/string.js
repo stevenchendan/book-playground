@@ -125,5 +125,12 @@ console.log(decodeURI(encodeURI(url))); //http://www.wrox.com/illegal value.js#s
 console.log(decodeURIComponent(encodeURIComponent(url))); //http://www.wrox.com/illegal value.js#start
 
 
+//Global, Window  global is not accessiable but we can use window object. it is delagate of global
 
+//access to global
+let global = function() {
+  return this;
+}
+
+console.log(global());
 
