@@ -69,5 +69,61 @@ console.log(subStringValue.startsWith("h")); //true
 console.log(subStringValue.endsWith("d")); //true
 console.log(subStringValue.includes("hello")); //true
 
+//string trim method
+let stringBeforeTrimValue = " hello world ";
+let stringAfterTrimValue = stringBeforeTrimValue.trim()
+console.log(stringAfterTrimValue); //hello world
+
+//repeat method
+let stringRepeatValue = "na ";
+console.log(stringRepeatValue.repeat(2)); //na na 
+
+//padStart and padEnd
+let stringPaddingValue = "foo";
+console.log(stringPaddingValue.padStart(6)); //      foo
+console.log(stringPaddingValue.padEnd(6)); //foo      
+console.log(stringPaddingValue.padStart(8, "bar")); //barbafoo
+console.log(stringPaddingValue.padEnd(8, "bar")); //foobarba
+
+
+
+//string iterators and destructuring
+let stringDestructingValue = "abc"
+let stringIterator = stringDestructingValue[Symbol.iterator]();
+console.log(stringIterator.next()); //{ value: 'a', done: false}
+console.log(stringIterator.next()); //{ value: 'b', done: false}
+console.log(stringIterator.next()); //{ value: 'c', done: false}
+
+console.log([...stringDestructingValue]);//['a', 'b', 'c']
+
+
+//string Case Method:
+let stringCaseValue = "Hello World";
+console.log(stringCaseValue.toLocaleLowerCase());//hello world
+console.log(stringCaseValue.toUpperCase());//HELLO WORLD
+console.log(stringCaseValue.toLocaleLowerCase());//hello world
+console.log(stringCaseValue.toLowerCase()); //hello world
+
+//string pattern-matching methods
+let text = "cat, bat, sat, fat";
+let pattern = /.at/;
+let matches = text.match(pattern);
+console.log(matches.index);//0
+console.log(matches[0]);//cat
+console.log(matches.lastIndex);//undefined
+
+let pos = text.search(/at/);
+console.log(pos);//1
+
+//use string pattern with replace
+console.log(text.replace(/at/g, "ond")); //cond, bond, sond, fond
+
+
+//URI encoding methods:
+let url = "http://www.wrox.com/illegal value.js#start";
+console.log(decodeURI(encodeURI(url))); //http://www.wrox.com/illegal value.js#start
+console.log(decodeURIComponent(encodeURIComponent(url))); //http://www.wrox.com/illegal value.js#start
+
+
 
 
