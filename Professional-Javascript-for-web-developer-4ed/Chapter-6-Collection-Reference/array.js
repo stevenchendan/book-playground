@@ -125,6 +125,43 @@ console.log(afterSpliceArray); //['yellow']
 console.log(spliceArray); //['green', 'red', 'purple', 'orange', 'blue']
 
 //search and location methods
+let searchArray = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+//return the index of 4
+console.log(searchArray.indexOf(4));//3
+console.log(searchArray.lastIndexOf(5));//4
+console.log(searchArray.includes(4));//true
+console.log(searchArray.indexOf(4, 4)); //5 search 4 from index 4
+console.log(searchArray.lastIndexOf(4, 4)); //3
+console.log(searchArray.includes(4, 7)); //false
+
+let person = { name: "Nicholas" };
+let people = [{ name: "Nicholas" }];
+let morePeople = [person];
+console.log(people.indexOf(person));//-1
+console.log(morePeople.indexOf(person)); //0
+console.log(people.includes(person)); //false
+console.log(morePeople.includes(person)); //true
+
+//predict search: find, findIndex
+//find return the matched item
+//fineIndex return the matched index
+let people2 = [
+  {
+    name: "Matt",
+    age: 27
+  },
+  {
+    name: "Nicholas",
+    age: 29
+  }
+];
+console.log(people2.find((element, index, array) => element.age < 28)); //{ name: 'Matt', age: 27 }
+console.log(people2.findIndex((element, index, array) => element.age < 28)); //0
+
+//iterative methods
+let numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+console.log(numbers.every((item, index, array) => item > 2)); //false
+console.log(numbers.some((item, index, array) => item > 2)); // true
 
 
 
