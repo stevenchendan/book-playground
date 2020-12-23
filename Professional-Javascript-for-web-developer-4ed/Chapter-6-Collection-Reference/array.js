@@ -82,19 +82,49 @@ let item = stackArray.pop();
 console.log(item);
 
 //queue like with push and shift
+//shift retrive the first item in array
+//unshift is the opposite of shift
 let queueArray = new Array();
 queueArray.push("red", "green");
 //first in first out
 console.log(queueArray.shift());//red
+console.log(queueArray);//['green']
+console.log(queueArray.unshift("black"));//2
+console.log(queueArray);//['black', 'green']
 
 
+//reordering methods
+let values = [1, 2, 3, 4, 5];
+console.log(values.reverse());// [5, 4, 3, 2, 1]
+//sort method
+console.log(values.sort()); //[1, 2, 3, 4, 5]
 
 
+//manipulation methods
+let manipulationColors = ["red", "green", "blue"];
+console.log(manipulationColors.concat(("yellow", ["black", "brown"])));// ['red', 'green', 'blue', 'yellow', 'black', 'brown']
+console.log(manipulationColors);
+//slice return the range of items in array
+console.log(manipulationColors.slice(1, 2)); //['green']
 
+//splice method - deletion, insertion, replacement
+console.log(manipulationColors.splice(0, 2)); //['red', 'green']
 
+let spliceArray = ["red", "green", "blue"];
+//remove
+let afterSpliceArray = spliceArray.splice(0, 1);
+console.log(afterSpliceArray); //['red']
+console.log(spliceArray);
+//insert
+afterSpliceArray = spliceArray.splice(1, 0, 'yellow', 'orange');
+console.log(afterSpliceArray);
+console.log(spliceArray);
+//insert and remove = replace
+afterSpliceArray = spliceArray.splice(1, 1, "red", "purple");
+console.log(afterSpliceArray); //['yellow']
+console.log(spliceArray); //['green', 'red', 'purple', 'orange', 'blue']
 
-
-
+//search and location methods
 
 
 
