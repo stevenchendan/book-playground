@@ -162,6 +162,36 @@ console.log(people2.findIndex((element, index, array) => element.age < 28)); //0
 let numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
 console.log(numbers.every((item, index, array) => item > 2)); //false
 console.log(numbers.some((item, index, array) => item > 2)); // true
+console.log(numbers.filter((item, index, array) => item > 2)); //[3, 4, 5, 4, 3]
+console.log(numbers.map((item, index, array) => item * 2)); //[2, 4, 6, 8, 10, 8, 6, 4, 2]
+console.log(numbers.forEach((item, index, array) => {
+  item * 2;
+})); //foreach does not have return value. it can used to fetch information from array
+
+//Reduction Methods
+let reduceValues = [1, 2, ,3 ,4 ,5];
+//adding all items together
+console.log(reduceValues.reduce((pre, cur, index, array) => pre + cur));//15
+//almost same as reduce but from right
+console.log(reduceValues.reduceRight((pre, cur, index, array) => pre + cur));//15
+
+
+//Typed Arrays passing binary data to native libraries
+const buf = new ArrayBuffer(16);
+console.log(buf.byteLength);//16
+console.log(buf.slice(4, 12).byteLength); //8
+
+//dataviews
+const fullDataView = new DataView(buf);
+console.log(fullDataView.byteOffset); //0
+
+
+
+
+
+
+
+
 
 
 
