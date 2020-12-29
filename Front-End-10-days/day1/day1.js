@@ -16,14 +16,14 @@
 // });
 
 //version 2 use class name
+//this a good practice. Not always rely on js
 const btn = document.getElementById('modeBtn');
 btn.addEventListener('click', (e) => {
   const body = document.body;
   if (body.className != 'night') {
     body.className = 'night';
-    e.target.innerHTML = '🌜';
   } else {
     body.className = '';
-    e.target.innerHTML = '🌞';
   }
 });
+
