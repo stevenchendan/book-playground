@@ -1,0 +1,36 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all 1s;
+}
+
+div.pic img {
+  width: 100%;
+}
+
+#modeBtn {
+  font-size: 2rem;
+  float: right;
+}
+
+body.night {
+  background-color: black;
+  color: white;
+  transition: all 1s;
+}
+
+#modeBtn::after {
+  content: '🌞';
+}
+
+body.night #modeBtn::after {
+  content: '🌜';
+}
