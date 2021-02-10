@@ -89,9 +89,20 @@ console.log(descriptor2.enumerable); //false
 console.log(typeof descriptor2.get); //function
 
 
+//merge two object
+//use Object.assign to merge object.
 
+let dest, src, test;
+dest = {};
+src = { id: 'src' };
+result = Object.assign(dest, src);
+console.log(dest);
+console.log(src);
 
+let emptyObject = {};
+let newObject = Object.assign(emptyObject, {a: 'a'}, {b: 'b'});
 
+console.log(newObject);
 
 
 
