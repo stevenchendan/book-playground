@@ -105,10 +105,17 @@ let newObject = Object.assign(emptyObject, {a: 'a'}, {b: 'b'});
 console.log(newObject);
 
 
+//object identity and equality
+//object is behive like === and cover corner case
 
+console.log(Object.is(true, 1));
+console.log(Object.is({}, {}));
+console.log(Object.is("2", 2));
 
+console.log(NaN === NaN);
+console.log(Object.is(NaN, NaN));
 
-
-
-
-//Read Property Attributes
+//object desctructing
+let nameArray = ["Steven", "Chen"];
+let [firstName, lastName] = nameArray;
+console.log(firstName, lastName);
