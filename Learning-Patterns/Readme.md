@@ -54,4 +54,16 @@ Terminology in this book:
 * Webpack - JavaScript module bundler
 * Next.js - A React framework with many best-in-class features including SSR, Code splitting, optimized for performance
 
+
+
+**Props**: short for properties. refer to internal data to a component in React.
+
+**State**: is an object holds some information that may change over the lifetime of the component. manage the way that data changes becomes. 
+
+**Props vs State**: **props** are variables passed to it by its parent component
+
+**State** is still variable. but directly initialized and managed by the component
+
+Think of React components like micro-applications each component should have a single purpose.
+
 ###Singleton Pattern
